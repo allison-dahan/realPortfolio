@@ -131,7 +131,7 @@ export const projects = [
     slug: "fitness-tracker",
     title: "Fitness Tracker",
     subtitle: "A single-page fitness tracking web app built with .NET and deployed on Azure",
-    heroImage: "/images/fitness-tracker-hero.jpg", // Replace with your actual screenshot
+    heroImage: "/images/fitness-tracker-hero.png", // Replace with your actual screenshot
     overview: `
       Fitness Tracker is a single-page health and fitness tracking app built with .NET 8 MVC and AppRun.js.
       The application allows users to view workouts, log meals, and track progress over time.
@@ -171,9 +171,9 @@ export const projects = [
       This project solidified my understanding of cloud deployment, authentication, and full-stack architecture using Microsoft tools.
     `,
     images: [
-      { src: "/images/fitness-tracker-dashboard.jpg", alt: "Fitness Tracker - Dashboard view" },
-      { src: "/images/fitness-tracker-workouts.jpg", alt: "Fitness Tracker - Workouts section with AppRun routing" },
-      { src: "/images/fitness-tracker-auth.jpg", alt: "Google Authentication login page" }
+      { src: "/images/fitness-tracker-dashboard.png", alt: "Fitness Tracker - Dashboard view" },
+      { src: "/images/fitness-tracker-nutrition.png", alt: "Fitness Tracker - Nutrition" },
+      { src: "/images/fitness-tracker-auth.png", alt: "Google Authentication login page" }
     ],
     github: "https://github.com/allison-dahan/FitnessTracker",
     liveSite: "https://fittrack-app-grh7cge7egg0d6bq.canadacentral-01.azurewebsites.net/" // Replace with your actual Azure deployment URL

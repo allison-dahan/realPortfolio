@@ -258,226 +258,151 @@ export default function Home() {
 
         {/* Projects Section */}
         <section id="projects" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  Here are some of the projects I've worked on.
-                </p>
-              </div>
-            </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
+  <div className="container px-4 md:px-6">
+    <div className="flex flex-col items-center justify-center space-y-4 text-center">
+      <div className="space-y-2">
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
+        <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+          Here are some of the projects I've worked on.
+        </p>
+      </div>
+    </div>
 
-              <Link href={'/projects/chez-mari'}>
-              <Card className="overflow-hidden flex flex-col">
-                <div className="aspect-video w-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Project 1"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle>Project One</CardTitle>
-                  <CardDescription>A web application for [description]</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground">
-                    Built with React, Next.js, and Tailwind CSS. This project features [key features].
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="outline">React</Badge>
-                    <Badge variant="outline">Next.js</Badge>
-                    <Badge variant="outline">Tailwind CSS</Badge>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-                  <Link
-                    href="https://github.com/yourusername/project1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://project1.example.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button size="sm" className="w-full sm:w-auto">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-              </Link>
-              <Card className="overflow-hidden flex flex-col">
-                <div className="aspect-video w-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Project 2"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle>Project Two</CardTitle>
-                  <CardDescription>A mobile-responsive website for [description]</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground">
-                    Built with TypeScript, Node.js, and MongoDB. This project features [key features].
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="outline">TypeScript</Badge>
-                    <Badge variant="outline">Node.js</Badge>
-                    <Badge variant="outline">MongoDB</Badge>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-                  <Link
-                    href="https://github.com/yourusername/project2"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://project2.example.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button size="sm" className="w-full sm:w-auto">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card className="overflow-hidden flex flex-col">
-                <div className="aspect-video w-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Project 3"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle>Project Three</CardTitle>
-                  <CardDescription>An e-commerce platform for [description]</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground">
-                    Built with React, Redux, and Firebase. This project features [key features].
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="outline">React</Badge>
-                    <Badge variant="outline">Redux</Badge>
-                    <Badge variant="outline">Firebase</Badge>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-                  <Link
-                    href="https://github.com/yourusername/project3"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://project3.example.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button size="sm" className="w-full sm:w-auto">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-              <Card className="overflow-hidden flex flex-col">
-                <div className="aspect-video w-full overflow-hidden">
-                  <Image
-                    src="/placeholder.svg?height=400&width=600"
-                    alt="Project 4"
-                    width={600}
-                    height={400}
-                    className="object-cover"
-                  />
-                </div>
-                <CardHeader className="pb-2">
-                  <CardTitle>Project Four</CardTitle>
-                  <CardDescription>A dashboard application for [description]</CardDescription>
-                </CardHeader>
-                <CardContent className="flex-grow">
-                  <p className="text-sm text-muted-foreground">
-                    Built with Next.js, PostgreSQL, and Prisma. This project features [key features].
-                  </p>
-                  <div className="mt-2 flex flex-wrap gap-2">
-                    <Badge variant="outline">Next.js</Badge>
-                    <Badge variant="outline">PostgreSQL</Badge>
-                    <Badge variant="outline">Prisma</Badge>
-                  </div>
-                </CardContent>
-                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-                  <Link
-                    href="https://github.com/yourusername/project4"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
-                      <Github className="mr-2 h-4 w-4" />
-                      Code
-                    </Button>
-                  </Link>
-                  <Link
-                    href="https://project4.example.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button size="sm" className="w-full sm:w-auto">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      Live Demo
-                    </Button>
-                  </Link>
-                </CardFooter>
-              </Card>
-            </div>
-            <div className="flex justify-center mt-8">
-              <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="group">
-                  View More on GitHub
-                  <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Button>
-              </Link>
-            </div>
+    <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
+
+      {/* Chez Mari */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/chez-mari" className="block">
+          <div className="aspect-video w-full overflow-hidden">
+            <Image src="/images/chez-mari-hero.png" alt="Chez Mari project" width={600} height={400} className="object-cover" />
           </div>
-        </section>
+          <CardHeader className="pb-2">
+            <CardTitle>Chez Mari Hair Salon</CardTitle>
+            <CardDescription>Custom WordPress theme for a Toronto-based salon</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              Built with WordPress and PHP, this theme supports dynamic content, service filtering, and is fully responsive.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">WordPress</Badge>
+              <Badge variant="outline">PHP</Badge>
+              <Badge variant="outline">Tailwind CSS</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+          <Link href="https://github.com/allison-dahan/chez-mari-theme" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+          <Link href="https://chezmari.ca" target="_blank" rel="noopener noreferrer">
+            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
+      {/* Task Manager */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/task-manager" className="block">
+          <div className="aspect-video w-full overflow-hidden">
+            <Image src="/images/task-manager-kanban.png" alt="Task Manager" width={600} height={400} className="object-cover" />
+          </div>
+          <CardHeader className="pb-2">
+            <CardTitle>Task Manager App</CardTitle>
+            <CardDescription>Full-stack Kanban-style task management with Clerk auth</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              Features drag-and-drop, Clerk auth, and TanStack Query for real-time task sync.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">React</Badge>
+              <Badge variant="outline">Hono</Badge>
+              <Badge variant="outline">Clerk</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+          <Link href="https://github.com/allison-dahan/taskmanager" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
+      {/* Fitness Tracker */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/fitness-tracker" className="block">
+          <div className="aspect-video w-full overflow-hidden">
+            <Image src="/images/fitness-tracker-dashboard.png" alt="Fitness Tracker" width={600} height={400} className="object-cover" />
+          </div>
+          <CardHeader className="pb-2">
+            <CardTitle>Fitness Tracker</CardTitle>
+            <CardDescription>Single-page fitness tracking app with CI/CD on Azure</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              .NET MVC, MySQL, Google Auth, AppRun.js, and GitHub Actions for CI/CD.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">.NET 8</Badge>
+              <Badge variant="outline">Azure</Badge>
+              <Badge variant="outline">MySQL</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+          <Link href="https://github.com/allison-dahan/FitnessTracker" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+          <Link href="https://fittrack-app-grh7cge7egg0d6bq.canadacentral-01.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
+            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
+      {/* Crafters Connect */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/crafters-connect" className="block">
+          <div className="aspect-video w-full overflow-hidden">
+            <Image src="/images/crafters-connect-hero.png" alt="Crafters Connect" width={600} height={400} className="object-cover" />
+          </div>
+          <CardHeader className="pb-2">
+            <CardTitle>Crafters Connect</CardTitle>
+            <CardDescription>Collaborative DIY platform for makers & creators</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              Designed in Figma and built with HTML/CSS/JS to manage shared projects and milestones.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">HTML</Badge>
+              <Badge variant="outline">CSS</Badge>
+              <Badge variant="outline">Figma</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+        <Link href="https://github.com/ahmedcalif/CraftersConnect" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+          <Link href="https://craftersconnect-1.onrender.com/" target="_blank" rel="noopener noreferrer">
+            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
+    </div>
+
+    <div className="flex justify-center mt-8">
+      <Link href="https://github.com/allison-dahan" target="_blank" rel="noopener noreferrer">
+        <Button variant="outline" className="group">
+          View More on GitHub
+          <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        </Button>
+      </Link>
+    </div>
+  </div>
+</section>
 
         {/* Contact Section */}
         <section id="contact" className="w-full py-12 md:py-24 lg:py-32">

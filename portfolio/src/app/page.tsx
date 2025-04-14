@@ -1,49 +1,97 @@
+"use client"
+
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code2 } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code2, Menu, X } from "lucide-react"
+import { useState } from "react"
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <div className="flex min-h-screen flex-col">
-      {/* Header */}
-      <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
-          <div className="flex gap-6 md:gap-10">
-            <Link href="/" className="flex items-center space-x-2">
+  
+      {/* Mobile Menu */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm md:hidden">
+          <div className="container flex h-16 items-center justify-between">
+            <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
               <Code2 className="h-6 w-6" />
               <span className="inline-block font-bold">Allison Dahan</span>
             </Link>
+            <Button
+              variant="ghost"
+              size="sm"
+              className="px-0 text-base hover:bg-transparent focus:bg-transparent"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              <X className="h-6 w-6" />
+              <span className="sr-only">Close menu</span>
+            </Button>
           </div>
-          <div className="flex flex-1 items-center justify-end space-x-4">
-            <nav className="flex items-center space-x-2">
-              <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
-                About
+          <nav className="container grid gap-6 px-4 py-6 text-center">
+            <Link
+              href="#about"
+              className="text-lg font-medium hover:underline underline-offset-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link
+              href="#skills"
+              className="text-lg font-medium hover:underline underline-offset-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Skills
+            </Link>
+            <Link
+              href="#projects"
+              className="text-lg font-medium hover:underline underline-offset-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Projects
+            </Link>
+            <Link
+              href="#contact"
+              className="text-lg font-medium hover:underline underline-offset-4"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+            <div className="flex justify-center gap-4 pt-4">
+              <Link href="https://github.com/allison-dahan" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                  <Github className="h-5 w-5" />
+                  <span className="sr-only">GitHub</span>
+                </Button>
               </Link>
-              <Link href="#skills" className="text-sm font-medium hover:underline underline-offset-4">
-                Skills
+              <Link href="https://linkedin.com/in/allison-dahan" target="_blank" rel="noopener noreferrer">
+                <Button variant="ghost" size="icon">
+                  <Linkedin className="h-5 w-5" />
+                  <span className="sr-only">LinkedIn</span>
+                </Button>
               </Link>
-              <Link href="#projects" className="text-sm font-medium hover:underline underline-offset-4">
-                Projects
+              <Link href="mailto:morganneallison@example.com">
+                <Button variant="ghost" size="icon">
+                  <Mail className="h-5 w-5" />
+                  <span className="sr-only">Email</span>
+                </Button>
               </Link>
-              <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
-                Contact
-              </Link>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </div>
-      </header>
+      )}
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
+        <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
+            <div className="grid gap-8 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h1 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                  <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none">
                     Hi, I'm <span className="text-primary">Allison</span>
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
@@ -51,7 +99,7 @@ export default function Home() {
                     experiences.
                   </p>
                 </div>
-                <div className="flex flex-col gap-2 min-[400px]:flex-row">
+                <div className="flex flex-col gap-2 sm:flex-row">
                   <Link href="#contact">
                     <Button className="w-full">Get in Touch</Button>
                   </Link>
@@ -74,7 +122,7 @@ export default function Home() {
                       <span className="sr-only">LinkedIn</span>
                     </Button>
                   </Link>
-                  <Link href="mailto:your.email@example.com">
+                  <Link href="mailto:morganneallison@example.com">
                     <Button variant="ghost" size="icon">
                       <Mail className="h-5 w-5" />
                       <span className="sr-only">Email</span>
@@ -83,7 +131,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="relative aspect-square overflow-hidden rounded-full border-4 border-primary">
+                <div className="relative aspect-square w-full max-w-[300px] md:max-w-[400px] overflow-hidden rounded-full border-4 border-primary">
                   <Image
                     src="/placeholder.svg?height=400&width=400"
                     alt="Profile"
@@ -101,38 +149,39 @@ export default function Home() {
         {/* About Section */}
         <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
           <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
-                <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  I'm a web developer with a passion for creating elegant solutions to complex problems.
-                </p>
-              </div>
-            </div>
+          <div className="flex flex-col items-center justify-center space-y-4 text-center">
+    <div className="space-y-2">
+      <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">About Me</h2>
+      <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
+        I’m a web developer with a people-first mindset and a passion for turning ideas into inclusive, scalable digital solutions.
+      </p>
+    </div>
+  </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">My Journey</h3>
                   <p className="text-muted-foreground">
-                    I started my coding journey in [Year] and have been passionate about web development ever since. I
-                    enjoy the challenge of creating intuitive user interfaces and solving complex problems through
-                    clean, efficient code.
-                  </p>
+          My path into tech wasn’t linear—I studied Economics at UBC before discovering my passion for development while working in hospitality. That experience helped me strengthen my adaptability, communication, and confidence—skills I now bring to my work as a developer.
+        </p>
+        <p className="text-muted-foreground">
+          After years in customer service and administration, I was drawn to the idea of building intuitive, impactful digital experiences. I haven’t looked back since.
+        </p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">My Approach</h3>
                   <p className="text-muted-foreground">
-                    I believe in writing clean, maintainable code and staying up-to-date with the latest technologies
-                    and best practices. I'm committed to creating accessible, responsive, and performant web
-                    applications.
-                  </p>
+          I specialize in React, Next.js, PostgreSQL, and Drizzle ORM, and I’m always exploring new ways to make technology more human. I care deeply about clean code, responsive design, and building with accessibility from the ground up.
+        </p>
+        <p className="text-muted-foreground">
+          I believe that collaboration and empathy are just as important as technical skills when creating software that truly serves users.
+        </p>
                 </div>
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">When I'm Not Coding</h3>
                   <p className="text-muted-foreground">
-                    When I'm not in front of my computer, you can find me [Your Hobbies/Interests]. I believe that
-                    having diverse interests helps fuel creativity in my development work.
-                  </p>
+          I’m often reading, working out, or exploring new cafes. I find inspiration in unexpected places and believe that diverse experiences help fuel better ideas in tech.
+        </p>
                 </div>
               </div>
               <div className="flex items-center justify-center">
@@ -159,9 +208,9 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2 lg:grid-cols-3">
               <Card>
-                <CardHeader>
+                <CardHeader className="pb-3">
                   <CardTitle>Frontend</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -177,22 +226,19 @@ export default function Home() {
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader>
+                <CardHeader className="pb-3">
                   <CardTitle>Backend</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <div className="flex flex-wrap gap-2">
-                    <Badge>Node.js</Badge>
-                    <Badge>Express</Badge>
-                    <Badge>MongoDB</Badge>
-                    <Badge>PostgreSQL</Badge>
-                    <Badge>RESTful APIs</Badge>
-                    <Badge>GraphQL</Badge>
+                    <Badge>PHP</Badge>
+                    <Badge>C#</Badge>
+                    <Badge>MySQL</Badge>
                   </div>
                 </CardContent>
               </Card>
               <Card>
-                <CardHeader>
+                <CardHeader className="pb-3">
                   <CardTitle>Tools & Others</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
@@ -221,8 +267,10 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 md:grid-cols-2">
-              <Card className="overflow-hidden">
+            <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
+
+              <Link href={'/projects/chez-mari'}>
+              <Card className="overflow-hidden flex flex-col">
                 <div className="aspect-video w-full overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
@@ -232,11 +280,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-2">
                   <CardTitle>Project One</CardTitle>
                   <CardDescription>A web application for [description]</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm text-muted-foreground">
                     Built with React, Next.js, and Tailwind CSS. This project features [key features].
                   </p>
@@ -246,22 +294,33 @@ export default function Home() {
                     <Badge variant="outline">Tailwind CSS</Badge>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Link href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
+                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+                  <Link
+                    href="https://github.com/yourusername/project1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
                   </Link>
-                  <Link href="https://project1.example.com" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm">
+                  <Link
+                    href="https://project1.example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="sm" className="w-full sm:w-auto">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </Button>
                   </Link>
                 </CardFooter>
               </Card>
-              <Card className="overflow-hidden">
+              </Link>
+              <Card className="overflow-hidden flex flex-col">
                 <div className="aspect-video w-full overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
@@ -271,11 +330,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-2">
                   <CardTitle>Project Two</CardTitle>
                   <CardDescription>A mobile-responsive website for [description]</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm text-muted-foreground">
                     Built with TypeScript, Node.js, and MongoDB. This project features [key features].
                   </p>
@@ -285,22 +344,32 @@ export default function Home() {
                     <Badge variant="outline">MongoDB</Badge>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Link href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
+                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+                  <Link
+                    href="https://github.com/yourusername/project2"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
                   </Link>
-                  <Link href="https://project2.example.com" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm">
+                  <Link
+                    href="https://project2.example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="sm" className="w-full sm:w-auto">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </Button>
                   </Link>
                 </CardFooter>
               </Card>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden flex flex-col">
                 <div className="aspect-video w-full overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
@@ -310,11 +379,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-2">
                   <CardTitle>Project Three</CardTitle>
                   <CardDescription>An e-commerce platform for [description]</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm text-muted-foreground">
                     Built with React, Redux, and Firebase. This project features [key features].
                   </p>
@@ -324,22 +393,32 @@ export default function Home() {
                     <Badge variant="outline">Firebase</Badge>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Link href="https://github.com/yourusername/project3" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
+                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+                  <Link
+                    href="https://github.com/yourusername/project3"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
                   </Link>
-                  <Link href="https://project3.example.com" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm">
+                  <Link
+                    href="https://project3.example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="sm" className="w-full sm:w-auto">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </Button>
                   </Link>
                 </CardFooter>
               </Card>
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden flex flex-col">
                 <div className="aspect-video w-full overflow-hidden">
                   <Image
                     src="/placeholder.svg?height=400&width=600"
@@ -349,11 +428,11 @@ export default function Home() {
                     className="object-cover"
                   />
                 </div>
-                <CardHeader>
+                <CardHeader className="pb-2">
                   <CardTitle>Project Four</CardTitle>
                   <CardDescription>A dashboard application for [description]</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="flex-grow">
                   <p className="text-sm text-muted-foreground">
                     Built with Next.js, PostgreSQL, and Prisma. This project features [key features].
                   </p>
@@ -363,15 +442,25 @@ export default function Home() {
                     <Badge variant="outline">Prisma</Badge>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                  <Link href="https://github.com/yourusername/project4" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
+                <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+                  <Link
+                    href="https://github.com/yourusername/project4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button variant="outline" size="sm" className="w-full sm:w-auto">
                       <Github className="mr-2 h-4 w-4" />
                       Code
                     </Button>
                   </Link>
-                  <Link href="https://project4.example.com" target="_blank" rel="noopener noreferrer">
-                    <Button size="sm">
+                  <Link
+                    href="https://project4.example.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto"
+                  >
+                    <Button size="sm" className="w-full sm:w-auto">
                       <ExternalLink className="mr-2 h-4 w-4" />
                       Live Demo
                     </Button>
@@ -379,7 +468,7 @@ export default function Home() {
                 </CardFooter>
               </Card>
             </div>
-            <div className="flex justify-center">
+            <div className="flex justify-center mt-8">
               <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="group">
                   View More on GitHub
@@ -402,7 +491,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl gap-6 py-12 lg:grid-cols-2">
+            <div className="mx-auto grid max-w-5xl gap-8 py-8 sm:py-12 md:grid-cols-2">
               <Card>
                 <CardHeader>
                   <CardTitle>Contact Information</CardTitle>
@@ -413,7 +502,7 @@ export default function Home() {
                     <Mail className="h-5 w-5 text-muted-foreground" />
                     <div>
                       <p className="text-sm font-medium">Email</p>
-                      <p className="text-sm text-muted-foreground">your.email@example.com</p>
+                      <p className="text-sm text-muted-foreground break-all">your.email@example.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -424,7 +513,7 @@ export default function Home() {
                         href="https://linkedin.com/in/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-muted-foreground hover:underline"
+                        className="text-sm text-muted-foreground hover:underline break-all"
                       >
                         linkedin.com/in/yourusername
                       </Link>
@@ -438,7 +527,7 @@ export default function Home() {
                         href="https://github.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-muted-foreground hover:underline"
+                        className="text-sm text-muted-foreground hover:underline break-all"
                       >
                         github.com/yourusername
                       </Link>
@@ -455,7 +544,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <form className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid gap-4 sm:grid-cols-2">
                       <div className="space-y-2">
                         <label
                           htmlFor="first-name"
@@ -522,19 +611,19 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t py-6 md:py-0">
+      <footer className="w-full border-t py-6">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
           <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} Allison Dahan. All rights reserved.
           </p>
           <div className="flex gap-4">
-            <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/allison-dahan" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </Button>
             </Link>
-            <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+            <Link href="https://linkedin.com/in/allison-dahan" target="_blank" rel="noopener noreferrer">
               <Button variant="ghost" size="icon">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>

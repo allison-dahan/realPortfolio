@@ -3,7 +3,7 @@ export const projects = [
   {
     slug: "chez-mari",
     title: "Chez Mari Hair Salon",
-    subtitle: "Custom WordPress theme for a Toronto-based salon",
+    subtitle: "Custom WordPress theme for a Vancouver-based salon",
     heroImage: "/images/chez-mari-hero.jpg",
     overview: `
       Chez Mari is a full-service hair salon based in Vancouver. Our goal was to transform their outdated website into an elegant, mobile-responsive, and SEO-optimized platform that reflects their upscale branding and services. The site was designed with both customers and salon staff in mind — offering an easy-to-navigate experience for visitors, and a streamlined content management system on the backend.
@@ -36,5 +36,58 @@ export const projects = [
       { src: "/images/chez-mari-services.jpg", alt: "Chez Mari - Service filtering UI" }
     ],
     liveSite: "https://chezmari.com"
+  },
+  {
+    slug: "task-manager",
+    title: "Task Manager App",
+    subtitle: "A modern full-stack task tracking app with real-time features",
+    heroImage: "/images/task-manager-hero.jpg", // Swap in your actual screenshot or mockup
+    overview: `
+      Task Manager is a productivity-focused web application that allows users to manage tasks with drag-and-drop simplicity.
+      It features real-time task status updates, due date management, and secure user authentication via Clerk.
+      Designed to be responsive and intuitive, this tool helps users stay on top of their work across any device.
+    `,
+    role: [
+      "Built full-stack task management functionality using React and Hono",
+      "Implemented Clerk for secure user authentication and session management",
+      "Used @hello-pangea/dnd to enable drag-and-drop task organization by status",
+      "Configured PostgreSQL with Drizzle ORM for relational data handling",
+      "Designed a responsive UI with shadcn/ui and managed data with TanStack Query"
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "TanStack Router",
+      "TanStack Query",
+      "shadcn/ui",
+      "@hello-pangea/dnd",
+      "Hono",
+      "Drizzle ORM",
+      "PostgreSQL",
+      "Clerk"
+    ],
+    process: `
+      I structured the application using a monorepo with Bun, splitting the frontend and backend into separate packages.
+      The API was built using Hono, with PostgreSQL handling data persistence through Drizzle ORM.
+      Clerk authentication was integrated from the ground up, securing all task routes by user session.
+      On the frontend, TanStack Query kept task data in sync across the app in real-time, while drag-and-drop functionality
+      allowed users to easily manage task statuses in a Kanban-style interface.
+    `,
+    challenges: [
+      "Setting up a full authentication flow with Clerk across both frontend and backend",
+      "Managing type safety and data consistency between client and server",
+      "Handling drag-and-drop task reordering logic while preserving backend integrity"
+    ],
+    outcome: `
+      The result is a fast, full-stack task manager with intuitive UX and real-time capabilities.
+      It’s scalable, mobile-friendly, and serves as a solid boilerplate for productivity tools.
+    `,
+    images: [
+      { src: "/images/task-manager-kanban.jpg", alt: "Task Manager - Kanban view with drag-and-drop" },
+      { src: "/images/task-manager-auth.jpg", alt: "Task Manager - Clerk login screen" },
+      { src: "/images/task-manager-dashboard.jpg", alt: "Task Manager - Dashboard showing tasks and statuses" }
+    ],
+    github: "https://github.com/allison-dahan/taskmanager",
   }
+  
 ]

@@ -186,7 +186,7 @@ export default function Home() {
               </div>
               <div className="flex items-center justify-center">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/images/me.png"
                   alt="About Me"
                   width={600}
                   height={400}
@@ -427,7 +427,7 @@ export default function Home() {
                     <Mail className="h-5 w-5 text-muted-foreground" />
                     <div>
                       <p className="text-sm font-medium">Email</p>
-                      <p className="text-sm text-muted-foreground break-all">your.email@example.com</p>
+                      <p className="text-sm text-muted-foreground break-all">morganneallison@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-4">
@@ -440,7 +440,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:underline break-all"
                       >
-                        linkedin.com/in/yourusername
+                        linkedin.com/in/allison-dahan
                       </Link>
                     </div>
                   </div>
@@ -454,7 +454,7 @@ export default function Home() {
                         rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:underline break-all"
                       >
-                        github.com/yourusername
+                        github.com/allison-dahan
                       </Link>
                     </div>
                   </div>

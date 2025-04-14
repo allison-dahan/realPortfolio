@@ -41,7 +41,7 @@ export const projects = [
     slug: "task-manager",
     title: "Task Manager App",
     subtitle: "A modern full-stack task tracking app with real-time features",
-    heroImage: "/images/task-manager-hero.jpg", // Swap in your actual screenshot or mockup
+    heroImage: "/images/task-manager-kanban.png", 
     overview: `
       Task Manager is a productivity-focused web application that allows users to manage tasks with drag-and-drop simplicity.
       It features real-time task status updates, due date management, and secure user authentication via Clerk.
@@ -83,9 +83,9 @@ export const projects = [
       It’s scalable, mobile-friendly, and serves as a solid boilerplate for productivity tools.
     `,
     images: [
-      { src: "/images/task-manager-kanban.jpg", alt: "Task Manager - Kanban view with drag-and-drop" },
-      { src: "/images/task-manager-auth.jpg", alt: "Task Manager - Clerk login screen" },
-      { src: "/images/task-manager-dashboard.jpg", alt: "Task Manager - Dashboard showing tasks and statuses" }
+      { src: "/images/task-manager-kanban.png", alt: "Task Manager - Kanban view with drag-and-drop" },
+      { src: "/images/task-manager-auth.png", alt: "Task Manager - Clerk login screen" },
+      { src: "/images/task-manager-form.png", alt: "Task Manager - Add a New Task" }
     ],
     github: "https://github.com/allison-dahan/taskmanager",
   }

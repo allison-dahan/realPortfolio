@@ -5,7 +5,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code2, Menu, X } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code2, X } from "lucide-react"
 import { useState } from "react"
 
 export default function Home() {
@@ -92,7 +92,7 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none">
-                    Hi, I'm <span className="text-primary">Allison</span>
+                    Hi, I&apos;m <span className="text-primary">Allison</span>
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     A passionate web developer specializing in creating beautiful, functional, and user-centered digital
@@ -178,7 +178,7 @@ export default function Home() {
         </p>
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">When I'm Not Coding</h3>
+                  <h3 className="text-xl font-bold">When I&apos;m Not Coding</h3>
                   <p className="text-muted-foreground">
           I’m often reading, working out, or exploring new cafes. I find inspiration in unexpected places and believe that diverse experiences help fuel better ideas in tech.
         </p>
@@ -263,7 +263,7 @@ export default function Home() {
       <div className="space-y-2">
         <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">My Projects</h2>
         <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-          Here are some of the projects I've worked on.
+          Here are some of the projects I&apos;ve worked on.
         </p>
       </div>
     </div>
@@ -411,8 +411,8 @@ export default function Home() {
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Get In Touch</h2>
                 <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-                  I'm currently available for freelance work and full-time positions. If you have a project that needs
-                  some creative touches, let's talk!
+                  I&apos;m currently available for freelance work and full-time positions. If you have a project that needs
+                  some creative touches, let&apos;s talk!
                 </p>
               </div>
             </div>
@@ -464,7 +464,7 @@ export default function Home() {
                 <CardHeader>
                   <CardTitle>Send Me a Message</CardTitle>
                   <CardDescription>
-                    Fill out the form below and I'll get back to you as soon as possible.
+                    Fill out the form below and I&apos;ll get back to you as soon as possible.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

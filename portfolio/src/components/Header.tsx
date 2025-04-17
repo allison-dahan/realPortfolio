@@ -20,14 +20,14 @@ export default function Header() {
         </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden md:flex items-center space-x-4">
-            <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
-              About
-            </Link>
             <Link href="#skills" className="text-sm font-medium hover:underline underline-offset-4">
               Skills
             </Link>
             <Link href="#projects" className="text-sm font-medium hover:underline underline-offset-4">
               Projects
+            </Link>
+            <Link href="#about" className="text-sm font-medium hover:underline underline-offset-4">
+              About
             </Link>
             <Link href="#contact" className="text-sm font-medium hover:underline underline-offset-4">
               Contact

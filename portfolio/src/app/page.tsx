@@ -133,7 +133,7 @@ export default function Home() {
               <div className="flex items-center justify-center">
                 <div className="relative aspect-square w-full max-w-[300px] md:max-w-[400px] overflow-hidden rounded-full border-4 border-primary">
                   <Image
-                    src="/placeholder.svg?height=400&width=400"
+                    src="/images/me.png"
                     alt="Profile"
                     width={400}
                     height={400}
@@ -157,7 +157,7 @@ export default function Home() {
       </p>
     </div>
   </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+            <div className="mx-auto max-w-5xl items-center gap-6 py-12 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">My Journey</h3>
@@ -183,15 +183,6 @@ export default function Home() {
           I’m often reading, working out, or exploring new cafes. I find inspiration in unexpected places and believe that diverse experiences help fuel better ideas in tech.
         </p>
                 </div>
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/images/me.png"
-                  alt="About Me"
-                  width={600}
-                  height={400}
-                  className="aspect-video overflow-hidden rounded-xl object-cover object-center"
-                />
               </div>
             </div>
           </div>

@@ -338,10 +338,7 @@ export default function Home() {
           </CardContent>
         </Link>
         <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-          <Link href="https://github.com/allison-dahan/chez-mari-theme" target="_blank" rel="noopener noreferrer">
-            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
-          </Link>
-          <Link href="https://chezmari.ca" target="_blank" rel="noopener noreferrer">
+          <Link href="https://chezmari.com" target="_blank" rel="noopener noreferrer">
             <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
           </Link>
         </CardFooter>

@@ -324,7 +324,7 @@ export default function Home() {
           </div>
           <CardHeader className="pb-2">
             <CardTitle>Chez Mari Hair Salon</CardTitle>
-            <CardDescription>Custom WordPress theme for a Toronto-based salon</CardDescription>
+            <CardDescription>Custom WordPress theme for a Vancouver-based salon</CardDescription>
           </CardHeader>
           <CardContent className="flex-grow">
             <p className="text-sm text-muted-foreground">

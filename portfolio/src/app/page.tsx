@@ -92,7 +92,7 @@ export default function Home() {
                 <div className="space-y-2">
                   <h3 className="text-xl font-bold">My Journey</h3>
                   <p className="text-muted-foreground">
-          My path into tech wasn’t linear—I studied Economics at UBC before discovering my passion for development while working in hospitality. That experience helped me strengthen my adaptability, communication, and confidence—skills I now bring to my work as a developer.
+          My path into tech wasn’t linear, I studied Economics at UBC before discovering my passion for development while working in hospitality. That experience helped me strengthen my adaptability, communication, and confidence—skills I now bring to my work as a developer.
         </p>
         <p className="text-muted-foreground">
           After years in customer service and administration, I was drawn to the idea of building intuitive, impactful digital experiences. I haven’t looked back since.

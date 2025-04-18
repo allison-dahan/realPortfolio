@@ -6,85 +6,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ExternalLink, ChevronRight, Code2, X } from "lucide-react"
-import { useState } from "react"
+
 
 export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   return (
     <div className="flex min-h-screen flex-col">
   
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm md:hidden">
-          <div className="container flex h-16 items-center justify-between">
-            <Link href="/" className="flex items-center space-x-2" onClick={() => setMobileMenuOpen(false)}>
-              <Code2 className="h-6 w-6" />
-              <span className="inline-block font-bold">Allison Dahan</span>
-            </Link>
-            <Button
-              variant="ghost"
-              size="sm"
-              className="px-0 text-base hover:bg-transparent focus:bg-transparent"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              <X className="h-6 w-6" />
-              <span className="sr-only">Close menu</span>
-            </Button>
-          </div>
-          <nav className="container grid gap-6 px-4 py-6 text-center">
-            <Link
-              href="#about"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="#skills"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Skills
-            </Link>
-            <Link
-              href="#projects"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              href="#contact"
-              className="text-lg font-medium hover:underline underline-offset-4"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact
-            </Link>
-            <div className="flex justify-center gap-4 pt-4">
-              <Link href="https://github.com/allison-dahan" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Button>
-              </Link>
-              <Link href="https://linkedin.com/in/allison-dahan" target="_blank" rel="noopener noreferrer">
-                <Button variant="ghost" size="icon">
-                  <Linkedin className="h-5 w-5" />
-                  <span className="sr-only">LinkedIn</span>
-                </Button>
-              </Link>
-              <Link href="mailto:morganneallison@example.com">
-                <Button variant="ghost" size="icon">
-                  <Mail className="h-5 w-5" />
-                  <span className="sr-only">Email</span>
-                </Button>
-              </Link>
-            </div>
-          </nav>
-        </div>
-      )}
+    
 
-      <main className="flex-1">
+      <main className="w-full max-w-screen-xl mx-auto px-4 sm:px-6">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
@@ -426,7 +356,7 @@ export default function Home() {
                     <div>
                       <p className="text-sm font-medium">LinkedIn</p>
                       <Link
-                        href="https://linkedin.com/in/yourusername"
+                        href="https://linkedin.com/in/allison-dahan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:underline break-all"
@@ -440,7 +370,7 @@ export default function Home() {
                     <div>
                       <p className="text-sm font-medium">GitHub</p>
                       <Link
-                        href="https://github.com/yourusername"
+                        href="https://github.com/allison-dahan"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-sm text-muted-foreground hover:underline break-all"

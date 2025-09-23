@@ -17,11 +17,13 @@ export const projects = [
       "Acted as the primary liaison between the client and dev team, gathering feedback and guiding decisions"
     ],
     techStack: ["WordPress", "PHP", "Tailwind CSS", "jQuery"],
-    process: `
-      I started by building out static mockups to align with the client’s vision. Once the frontend structure was approved, I transitioned to creating dynamic WordPress templates. Using Advanced Custom Fields (ACF), I established custom post types for services and created taxonomies to allow for filtering by category. This taxonomy-first approach laid the foundation for a scalable, flexible site structure.
-      
-      To improve the user experience, I added an interactive services carousel and ensured consistent design elements across devices. On the backend, I prioritized ease-of-use for the client, so they could manage updates without needing a developer.
-    `,
+    process: `My group and I consulted closely with the client to understand and refine their vision for the salon’s online presence. We created multiple iterations of static mockups to ensure alignment, and once the design direction was approved, the work was divided by page (home, services, blog, gallery, etc.) so we could move efficiently in parallel.
+
+I was responsible for the full implementation of the Services page, which included building dynamic WordPress templates and integrating Advanced Custom Fields (ACF) to establish custom post types and taxonomies. This taxonomy-first approach enabled service filtering by category and laid the foundation for a scalable site structure.
+
+A key focus of my work was ensuring design consistency across different screen sizes. I developed an interactive services carousel, refined responsive layouts, and implemented reusable components to maintain a cohesive experience on desktop, tablet, and mobile.
+
+On the backend, I prioritized ease of use for the client, enabling them to update services independently without relying on a developer.`,
     challenges: [
       "Managing differing feedback between the business owner (Mari) and her partner (Michael), which occasionally created roadblocks in the design approval process",
       "Translating technical updates and development decisions into language the client could clearly understand",

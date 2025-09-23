@@ -22,7 +22,7 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
                   <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl xl:text-6xl/none">
-                    Hi, I&apos;m <span className="text-primary">Allison</span>
+                    Hi, I&apos;m <span className="text-primary">Allison </span>
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl">
                     A passionate web developer specializing in creating beautiful, functional, and user-centered digital
@@ -343,6 +343,59 @@ export default function Home() {
           </Link>
         </CardFooter>
       </Card>
+
+      {/* Flare */}
+<Card className="overflow-hidden flex flex-col">
+  <Link href="/projects/flare" className="block">
+    <div className="aspect-video w-full overflow-hidden">
+      <Image
+        src="/images/flare-hero.png" // swap with your actual screenshot
+        alt="Flare Wildfire Mitigation App"
+        width={600}
+        height={400}
+        className="object-cover"
+      />
+    </div>
+    <CardHeader className="pb-2">
+      <CardTitle>Flare Wildfire Mitigation App</CardTitle>
+      <CardDescription>BC wildfire risk mapping app with real-time data</CardDescription>
+    </CardHeader>
+    <CardContent className="flex-grow">
+      <p className="text-sm text-muted-foreground">
+        Built with Next.js, PostgreSQL, and external APIs, this MVP visualizes real-time wildfire
+        risk levels across British Columbia with an interactive map and city-based search.
+      </p>
+      <div className="mt-2 flex flex-wrap gap-2">
+        <Badge variant="outline">Next.js</Badge>
+        <Badge variant="outline">React</Badge>
+        <Badge variant="outline">PostgreSQL</Badge>
+        <Badge variant="outline">Drizzle ORM</Badge>
+        <Badge variant="outline">Google Maps API</Badge>
+      </div>
+    </CardContent>
+  </Link>
+  <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+    <Link
+      href="https://github.com/noonnofus/Flare_IDSP?tab=readme-ov-file" // replace with your repo/demo link
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button size="sm">
+        <ExternalLink className="mr-2 h-4 w-4" /> GitHub
+      </Button>
+    </Link> 
+    <Link
+      href="https://www.flare-bc.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button size="sm">
+        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+      </Button>
+    </Link> 
+  </CardFooter>
+</Card>
+      
 
       {/* Task Manager */}
       <Card className="overflow-hidden flex flex-col">

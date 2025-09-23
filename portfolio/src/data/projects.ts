@@ -175,9 +175,67 @@ export const projects = [
       { src: "/images/fitness-tracker-nutrition.png", alt: "Fitness Tracker - Nutrition" },
       { src: "/images/fitness-tracker-auth.png", alt: "Google Authentication login page" }
     ],
-    github: "https://github.com/allison-dahan/FitnessTracker",
-    liveSite: "https://fittrack-app-grh7cge7egg0d6bq.canadacentral-01.azurewebsites.net/" // Replace with your actual Azure deployment URL
+    github: "https://github.com/allison-dahan/FitnessTracker"
+  },
+  {
+    slug: "flare",
+    title: "Flare Wildfire Mitigation App",
+    subtitle: "BC wildfire risk mapping app integrating real-time weather and fire danger data",
+    heroImage: "/images/flare-hero.png", // replace with your best screenshot
+    overview: `
+      Flare is a web application designed to help communities in high-risk areas of British Columbia
+      prepare for wildfire season. It combines real-time weather data, fire weather indices, and an
+      interactive map interface to visualize local wildfire risk levels. Built in collaboration with a
+      cross-disciplinary team, the app served as a proof-of-concept tool for public safety awareness.
+    `,
+    role: [
+      "Served as Technical Lead, coordinating design and development alignment",
+      "Implemented core features using Next.js, React, Drizzle ORM, and PostgreSQL",
+      "Integrated APIs (Google Maps, OpenWeather, Fire Weather Index) for real-time wildfire data",
+      "Built search functionality to retrieve and display wildfire risk scores by BC city",
+      "Developed reusable UI components with Tailwind CSS for responsiveness and accessibility",
+      "Guided teammates on Git/GitHub workflows, code quality, and presentations"
+    ],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Google Maps API",
+      "OpenWeather API"
+    ],
+    process: `
+      I started by defining the database schema with Drizzle ORM to store weather and fire index data.
+      On the frontend, I built a responsive map interface with Google Maps, enabling users to search
+      for cities in BC. API integrations with OpenWeather and the Fire Weather Index powered real-time
+      wildfire risk calculations. I also created mock fetch utilities to simulate API failures during testing.
+      
+      As Technical Lead, I facilitated collaboration between designers and developers, ensured code review
+      standards were followed, and coached teammates on debugging and Git workflows.
+    `,
+    challenges: [
+      "Handling asynchronous API calls and fallback states when external data was unavailable",
+      "Aligning design requirements with technical feasibility under a tight 12-week timeline",
+      "Coaching teammates while also contributing to core development tasks"
+    ],
+    outcome: `
+      The result was a fully functional MVP delivered within the program term. Flare featured an
+      interactive wildfire risk map, city-based search, and real-time fire danger data, all optimized
+      for mobile and desktop use. It achieved a 95% code merge success rate on first attempts thanks to
+      strong collaboration standards. The app demonstrated the potential for IoT-style data integration
+      to improve wildfire preparedness in BC communities.
+    `,
+    images: [
+      { src: "/images/flare-map.png", alt: "Flare - Interactive wildfire risk map" },
+      { src: "/images/flare-search.png", alt: "Flare - City search and risk data" },
+      { src: "/images/flare-api.png", alt: "Flare - API integration output view" }
+    ],
+    github: "https://github.com/noonnofus/Flare_IDSP?tab=readme-ov-file", // replace if repo is private or under org
+    liveSite: "https://www.flare-bc.com/" // add demo link if hosted
   }
+  
   
   
   

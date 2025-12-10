@@ -316,6 +316,55 @@ export default function Home() {
 
     <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
 
+      {/* Real Estate CMS */}
+<Card className="overflow-hidden flex flex-col">
+  <Link href="/projects/webflow-real-estate" className="block">
+    <div className="aspect-video w-full overflow-hidden bg-gray-100">
+      <Image
+        src="/images/webflow-real-estate-hero.png"
+        alt="Webflow Real Estate CMS project"
+        width={600}
+        height={400}
+        className="object-cover"
+      />
+    </div>
+
+    <CardHeader className="pb-2">
+      <CardTitle>Webflow Real Estate CMS</CardTitle>
+      <CardDescription>
+        A dynamic CMS-driven listing site built to explore modern visual development
+      </CardDescription>
+    </CardHeader>
+
+    <CardContent className="flex-grow">
+      <p className="text-sm text-muted-foreground">
+        A fully responsive real estate listings website built in Webflow to experiment with visual,
+        no-code/low-code tooling. Includes a structured CMS, dynamic templates, reusable components,
+        and organized class naming for scalable design.
+      </p>
+
+      <div className="mt-2 flex flex-wrap gap-2">
+        <Badge variant="outline">Webflow</Badge>
+        <Badge variant="outline">CMS</Badge>
+        <Badge variant="outline">Responsive Design</Badge>
+      </div>
+    </CardContent>
+  </Link>
+
+  <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+    <Link
+      href="https://real-estate-clinics.webflow.io/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Button size="sm">
+        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
+      </Button>
+    </Link>
+  </CardFooter>
+</Card>
+
+
       {/* Chez Mari */}
       <Card className="overflow-hidden flex flex-col">
         <Link href="/projects/chez-mari" className="block">

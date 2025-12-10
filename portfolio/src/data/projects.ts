@@ -125,15 +125,15 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
       { src: "/images/crafters-connect-project.png", alt: "Project creation and milestones UI" },
       { src: "/images/crafters-connect-community.png", alt: "Community post sharing feature" }
     ],
-    github: "https://github.com/ahmedcalif/CraftersConnect", // Leave empty or remove if not available
-    liveSite: "https://craftersconnect-1.onrender.com/" // Replace with your actual deployed link if you have one
+    github: "https://github.com/ahmedcalif/CraftersConnect", 
+    liveSite: "https://craftersconnect-1.onrender.com/" 
   },
 
   {
     slug: "fitness-tracker",
     title: "Fitness Tracker",
     subtitle: "A single-page fitness tracking web app built with .NET and deployed on Azure",
-    heroImage: "/images/fitness-tracker-hero.png", // Replace with your actual screenshot
+    heroImage: "/images/fitness-tracker-hero.png", 
     overview: `
       Fitness Tracker is a single-page health and fitness tracking app built with .NET 8 MVC and AppRun.js.
       The application allows users to view workouts, log meals, and track progress over time.
@@ -236,8 +236,68 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
     ],
     github: "https://github.com/noonnofus/Flare_IDSP?tab=readme-ov-file", // replace if repo is private or under org
     liveSite: "https://www.flare-bc.com/" // add demo link if hosted
+  },
+  {
+    slug: "webflow-real-estate",
+    title: "Real Estate Portfolio Website (Webflow CMS)",
+    subtitle: "A responsive CMS-driven real estate listing experience built entirely in Webflow.",
+    heroImage: "/images/webflow-real-estate-hero.png",
+    overview: `
+    This project was built to experiment with new technology and understand how modern no-code tools
+    like Webflow streamline the development process. The app showcases dynamically generated real estate
+    listings powered by Webflow CMS, complete with hero sections, stats, gallery images, and structured content.
+    
+    The goal was to recreate a real-world listing workflow—similar to a realtor platform—while practicing
+    responsive layouts, grid systems, class naming structure, and component reusability in Webflow.
+  `,
+  role: [
+    "Designed a fully responsive Webflow layout using sections, containers, grids, and flexbox",
+    "Built a Real Estate CMS Collection with custom fields such as project type, location, square footage, and gallery images",
+    "Created a dynamic Template Page where each listing automatically renders CMS content",
+    "Implemented clean metadata layout using pill components and structured content hierarchy",
+    "Added a gallery section with hover scale interactions and responsive image grids",
+    "Built a multi-card Projects page with CMS-bound cards linking to individual listings",
+    "Created a global navigation bar and reusable components across pages"
+  ],
+  techStack: ["Webflow"],
+  process: `
+    I began by architecting the CMS structure—creating collections for properties and galleries,
+    defining the correct field types (images, plain text, numbers, rich text), and ensuring accurate
+    long-term data storage using Webflow’s “plain text” and “multi-image” fields.
+
+    Once the CMS was in place, I built the listing template page, connecting hero images, metadata fields,
+    descriptive content, and gallery images using Webflow’s binding system.
+
+    I then created an organized class naming system (sections, containers, wrappers, cards) and reused
+    global components across the site—including a navigation bar, project cards, and metadata pills.
+    
+    Finally, I styled the site with responsive breakpoints, hover transitions, and layout refinements
+    to ensure the project feels professional across desktop and mobile.
+  `,
+
+  challenges: [
+    "Maintaining an organized and scalable class structure for sections, containers, and components",
+    "Ensuring the CMS bindings remained consistent across template and landing pages",
+    "Making the layout fully responsive for mobile (320px and below)",
+  ],
+
+  outcome: `
+    The project demonstrates complete Webflow proficiency—CMS setup, responsive design,
+    reusable components, interactions, and polished UI.  
+    It serves as a strong example of front-end development without traditional code and showcases
+    my ability to translate real-world business needs (like property listings) into a functional,
+    visually appealing Webflow site suitable for clients or collaborative teams.
+  `,
+
+  images: [
+    { src: "/images/webflow-realestate-home.png", alt: "Real Estate Portfolio - Landing" },
+    { src: "/images/webflow-realestate-listing.png", alt: "Property Listing Dynamic Page" },
+    { src: "/images/webflow-realestate-projects.png", alt: "Projects Section" }
+  ],
+
+  liveSite: "https://real-estate-clinics.webflow.io/", 
+
   }
-  
   
   
   

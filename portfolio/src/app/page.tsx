@@ -316,9 +316,41 @@ export default function Home() {
 
     <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
 
+      {/* Lunaul */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/lunaul" className="flex flex-col flex-grow">
+          <div className="aspect-video w-full overflow-hidden bg-gray-100">
+            <Image src="/images/lunaul-hero.png" alt="Lunaul Shopify Theme" width={600} height={400} className="object-cover" />
+          </div>
+          <CardHeader className="pb-2">
+            <CardTitle>Lunaul — Shopify Theme</CardTitle>
+            <CardDescription>Custom Shopify theme built from scratch for a luxury fashion brand</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              A fully custom Shopify theme written in Liquid, JavaScript, and CSS — featuring a product gallery, variant-aware sold-out logic, lightbox archive, and a dedicated cart page.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">Shopify</Badge>
+              <Badge variant="outline">Liquid</Badge>
+              <Badge variant="outline">JavaScript</Badge>
+              <Badge variant="outline">CSS</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+          <Link href="https://github.com/allison-dahan/lunaul-theme" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+          <Link href="https://lunaul.us/" target="_blank" rel="noopener noreferrer">
+            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Site</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
       {/* Energynet */}
       <Card className="overflow-hidden flex flex-col">
-        <Link href="/projects/energynet" className="block">
+        <Link href="/projects/energynet" className="flex flex-col flex-grow">
           <div className="aspect-video w-full overflow-hidden bg-gray-100">
             <Image src="/images/energynet-hero.png" alt="Energynet" width={600} height={400} className="object-cover" />
           </div>
@@ -342,12 +374,15 @@ export default function Home() {
           <Link href="https://github.com/allison-dahan/energynet" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
           </Link>
+          <Link href="https://energynet.com.ph/" target="_blank" rel="noopener noreferrer">
+            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Site</Button>
+          </Link>
         </CardFooter>
       </Card>
 
       {/* Real Estate CMS */}
 <Card className="overflow-hidden flex flex-col">
-  <Link href="/projects/webflow-real-estate" className="block">
+  <Link href="/projects/webflow-real-estate" className="flex flex-col flex-grow">
     <div className="aspect-video w-full overflow-hidden bg-gray-100">
       <Image
         src="/images/webflow-real-estate-hero.png"
@@ -396,7 +431,7 @@ export default function Home() {
 
       {/* Chez Mari */}
       <Card className="overflow-hidden flex flex-col">
-        <Link href="/projects/chez-mari" className="block">
+        <Link href="/projects/chez-mari" className="flex flex-col flex-grow">
           <div className="aspect-video w-full overflow-hidden">
             <Image src="/chez-logo.svg" alt="Chez Mari project" width={600} height={400} className="object-cover" />
           </div>
@@ -421,7 +456,7 @@ export default function Home() {
 
       {/* Flare */}
 <Card className="overflow-hidden flex flex-col">
-  <Link href="/projects/flare" className="block">
+  <Link href="/projects/flare" className="flex flex-col flex-grow">
     <div className="aspect-video w-full overflow-hidden">
       <Image
         src="/images/flare-hero.png" // swap with your actual screenshot
@@ -465,7 +500,7 @@ export default function Home() {
 
       {/* Task Manager */}
       <Card className="overflow-hidden flex flex-col">
-        <Link href="/projects/task-manager" className="block">
+        <Link href="/projects/task-manager" className="flex flex-col flex-grow">
           <div className="aspect-video w-full overflow-hidden">
             <Image src="/task-manager-logo.svg" alt="Task Manager" width={600} height={400} className="object-cover" />
           </div>
@@ -493,7 +528,7 @@ export default function Home() {
 
       {/* Fitness Tracker */}
       <Card className="overflow-hidden flex flex-col">
-        <Link href="/projects/fitness-tracker" className="block">
+        <Link href="/projects/fitness-tracker" className="flex flex-col flex-grow">
           <div className="aspect-video w-full overflow-hidden">
             <Image src="/fitness-tracker-logo.svg" alt="Fitness Tracker" width={600} height={400} className="object-cover" />
           </div>
@@ -521,7 +556,7 @@ export default function Home() {
 
       {/* Crafters Connect */}
       <Card className="overflow-hidden flex flex-col">
-        <Link href="/projects/crafters-connect" className="block">
+        <Link href="/projects/crafters-connect" className="flex flex-col flex-grow">
           <div className="aspect-video w-full overflow-hidden">
             <Image src="/crafters-logo.svg" alt="Crafters Connect" width={600} height={400} className="object-cover" />
           </div>

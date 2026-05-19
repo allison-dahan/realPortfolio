@@ -382,4 +382,68 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
 
   },
 
+  {
+    slug: "lunaul",
+    title: "Lunaul — Shopify Theme",
+    subtitle: "Custom Shopify theme built from scratch for a luxury fashion brand",
+    heroImage: "/images/lunaul-hero.png",
+    overview: `
+      Lunaul is a fully custom Shopify theme built from scratch for Kojo, a luxury fashion brand.
+      Rather than adapting a base theme, every section — from the hero and product gallery to the
+      collection page and cart — was written in Liquid, JavaScript, and CSS to match a specific
+      aesthetic and set of interactions. The theme spans a loading screen, animated announcement bar,
+      push sidebar navigation, product pages with variant-aware sold-out states, a full archive with
+      lightbox, and a dedicated cart page.
+    `,
+    role: [
+      "Sole developer — built every section, snippet, template, and asset from the ground up in Liquid, JavaScript, and CSS",
+      "Implemented a loading screen, animated announcement bar marquee, and a push sidebar mobile nav",
+      "Built a product gallery carousel with arrow navigation, zoom-on-click lightbox, and per-variant sold-out button logic",
+      "Developed a full collection page with a 4-column default grid and category filtering",
+      "Created an archive template with a full-image lightbox and browsable overlay controls",
+      "Replaced the cart drawer with a dedicated full-page cart with live quantity updates",
+      "Designed and wired a hero section supporting background video (YouTube or native) or image with configurable CTA",
+      "Built reusable sections: image carousel, marquee, lookbook banner, category grid, featured collection, and Instagram embed"
+    ],
+    techStack: [
+      "Shopify",
+      "Liquid",
+      "JavaScript",
+      "CSS"
+    ],
+    process: `
+      I started by establishing the theme's global foundation — the theme.liquid layout, CSS custom properties,
+      and reusable header and footer components for both desktop and mobile. The header uses a centered-logo
+      layout with a push sidebar for mobile and a dropdown-capable desktop nav.
+
+      From there I built each section and template individually. The product page required the most
+      layered logic: a carousel-style gallery with arrow navigation and a lightbox overlay, a variant
+      picker that dynamically updates price, availability, and button state per-variant, and an accordion
+      for product details. I added per-variant sold-out button disabling so that unavailable options are
+      clearly communicated without hiding the full variant grid.
+
+      The archive template came next — a scrollable image grid where clicking any image opens a full-screen
+      lightbox with prev/next navigation. The cart was built as a full dedicated page rather than a drawer,
+      with quantity controls and a clean layout consistent with the rest of the brand.
+
+      Throughout the build I kept the JavaScript vanilla and lightweight, scoping each feature to its own
+      section rather than relying on a bundler or framework.
+    `,
+    challenges: [
+      "Implementing per-variant sold-out states without a framework — required reading variant availability from Shopify's variant JSON and toggling button states on selection change",
+      "Building a two-axis gallery (carousel + lightbox) that shares image state without conflicting event listeners",
+      "Keeping the push sidebar and search overlay layers stacked correctly across all page templates",
+      "Ensuring the full-page cart remained consistent with the theme's aesthetic while handling live quantity updates"
+    ],
+    outcome: `
+      The result is a production-ready Shopify theme that gives Kojo a cohesive, brand-specific storefront
+      with no reliance on a base theme or third-party section builders. Every interaction — from the loading
+      animation to the lightbox to the variant picker — was written to spec and reflects the brand's
+      luxury positioning. The architecture keeps each section self-contained and easily extendable for
+      future CMS-driven updates.
+    `,
+    github: "https://github.com/allison-dahan/lunaul-theme",
+    videoDemo: "/videos/lunaul-demo.mp4",
+  },
+
 ]

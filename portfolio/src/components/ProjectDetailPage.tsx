@@ -19,6 +19,7 @@ type ProjectDetailPageProps = {
   liveSite?: string
   videoBefore?: string
   videoAfter?: string
+  videoDemo?: string
 }
 
 export default function ProjectDetailPage({
@@ -36,6 +37,7 @@ export default function ProjectDetailPage({
   liveSite,
   videoBefore,
   videoAfter,
+  videoDemo,
 }: ProjectDetailPageProps) {
   return (
 
@@ -112,6 +114,13 @@ export default function ProjectDetailPage({
         <h2 className="text-2xl font-semibold">Outcome & Reflection</h2>
         <p>{outcome}</p>
       </div>
+
+      {videoDemo && (
+        <div>
+          <h2 className="text-2xl font-semibold">Demo</h2>
+          <video src={videoDemo} controls className="rounded-xl w-full shadow mt-4" />
+        </div>
+      )}
 
       {(videoBefore || videoAfter) && (
         <div>

@@ -316,6 +316,35 @@ export default function Home() {
 
     <div className="mx-auto grid max-w-5xl gap-6 py-8 sm:py-12 sm:grid-cols-2">
 
+      {/* Energynet */}
+      <Card className="overflow-hidden flex flex-col">
+        <Link href="/projects/energynet" className="block">
+          <div className="aspect-video w-full overflow-hidden bg-gray-100">
+            <Image src="/images/energynet-hero.png" alt="Energynet" width={600} height={400} className="object-cover" />
+          </div>
+          <CardHeader className="pb-2">
+            <CardTitle>Energynet</CardTitle>
+            <CardDescription>Custom WordPress theme for a Philippine electrical company</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-sm text-muted-foreground">
+              A fully custom WordPress theme spanning ten pages with product catalogue filtering, projects showcase, and events — built without ACF or page builder plugins.
+            </p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              <Badge variant="outline">WordPress</Badge>
+              <Badge variant="outline">PHP</Badge>
+              <Badge variant="outline">Vite</Badge>
+              <Badge variant="outline">JavaScript</Badge>
+            </div>
+          </CardContent>
+        </Link>
+        <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
+          <Link href="https://github.com/allison-dahan/energynet" target="_blank" rel="noopener noreferrer">
+            <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
+          </Link>
+        </CardFooter>
+      </Card>
+
       {/* Real Estate CMS */}
 <Card className="overflow-hidden flex flex-col">
   <Link href="/projects/webflow-real-estate" className="block">
@@ -387,10 +416,7 @@ export default function Home() {
           </CardContent>
         </Link>
         <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
-          <Link href="https://chezmari.com" target="_blank" rel="noopener noreferrer">
-            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
-          </Link>
-        </CardFooter>
+          </CardFooter>
       </Card>
 
       {/* Flare */}
@@ -431,15 +457,6 @@ export default function Home() {
     >
       <Button size="sm">
         <ExternalLink className="mr-2 h-4 w-4" /> GitHub
-      </Button>
-    </Link> 
-    <Link
-      href="https://www.flare-bc.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <Button size="sm">
-        <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
       </Button>
     </Link> 
   </CardFooter>
@@ -498,9 +515,6 @@ export default function Home() {
         <CardFooter className="flex flex-col sm:flex-row gap-2 justify-between">
           <Link href="https://github.com/allison-dahan/FitnessTracker" target="_blank" rel="noopener noreferrer">
             <Button variant="outline" size="sm"><Github className="mr-2 h-4 w-4" /> Code</Button>
-          </Link>
-          <Link href="https://fittrack-app-grh7cge7egg0d6bq.canadacentral-01.azurewebsites.net/" target="_blank" rel="noopener noreferrer">
-            <Button size="sm"><ExternalLink className="mr-2 h-4 w-4" /> Live Demo</Button>
           </Link>
         </CardFooter>
       </Card>

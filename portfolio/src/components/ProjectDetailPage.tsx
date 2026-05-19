@@ -14,9 +14,11 @@ type ProjectDetailPageProps = {
   process: string
   challenges: string[]
   outcome: string
-  images: { src: string; alt: string }[]
+  images?: { src: string; alt: string }[]
   github?: string
   liveSite?: string
+  videoBefore?: string
+  videoAfter?: string
 }
 
 export default function ProjectDetailPage({
@@ -32,6 +34,8 @@ export default function ProjectDetailPage({
   images,
   github,
   liveSite,
+  videoBefore,
+  videoAfter,
 }: ProjectDetailPageProps) {
   return (
 
@@ -86,26 +90,48 @@ export default function ProjectDetailPage({
         </ul>
       </div>
 
-      <div>
-        <h2 className="text-2xl font-semibold">Mockups</h2>
-        <div className="space-y-4">
-          {images.map((img, i) => (
-            <Image
-              key={i}
-              src={img.src}
-              alt={img.alt}
-              width={600}
-              height={400}
-              className="rounded-lg"
-            />
-          ))}
+      {images && images.length > 0 && (
+        <div>
+          <h2 className="text-2xl font-semibold">Mockups</h2>
+          <div className="space-y-4">
+            {images.map((img, i) => (
+              <Image
+                key={i}
+                src={img.src}
+                alt={img.alt}
+                width={600}
+                height={400}
+                className="rounded-lg"
+              />
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       <div>
         <h2 className="text-2xl font-semibold">Outcome & Reflection</h2>
         <p>{outcome}</p>
       </div>
+
+      {(videoBefore || videoAfter) && (
+        <div>
+          <h2 className="text-2xl font-semibold">Before &amp; After</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+            {videoBefore && (
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-2">Before</p>
+                <video src={videoBefore} controls className="rounded-xl w-full shadow" />
+              </div>
+            )}
+            {videoAfter && (
+              <div>
+                <p className="text-sm font-medium text-muted-foreground mb-2">After</p>
+                <video src={videoAfter} controls className="rounded-xl w-full shadow" />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       <div className="flex gap-4 mt-6">
         {github && (

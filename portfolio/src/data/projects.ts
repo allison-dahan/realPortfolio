@@ -1,6 +1,74 @@
 // data/projects.ts
 export const projects = [
   {
+    slug: "energynet",
+    title: "Energynet",
+    subtitle: "Custom WordPress theme for a Philippine electrical products and services company",
+    heroImage: "/images/energynet-hero.png",
+    overview: `
+      Energynet is a fully custom WordPress theme built from scratch for Energynet Inc., a Philippine-based
+      electrical products and services company. The theme spans ten pages including a product catalogue with
+      advanced filtering, a projects showcase with category-based filtering, and an events section —
+      all translated from a Figma design and built without relying on Advanced Custom Fields or page builder plugins.
+      The site is optimized for performance and fully responsive across desktop and mobile.
+    `,
+    role: [
+      "Sole WordPress Developer — translated a Figma design into a fully custom theme from initial setup to production",
+      "Created custom post types and taxonomies for Products, Projects, and Events without ACF dependency",
+      "Built a URL-state-persisted product filtering system with collapsible subcategory navigation",
+      "Implemented a projects drawer with category grid filtering, badge hover states, and pinned pagination",
+      "Developed an interactive Philippines map using MapTiler (later removed by the client), demonstrating resourcefulness and adaptability in applying new technology under real project constraints",
+      "Optimized performance with lazy loading, hero image optimization, and Vite-based asset bundling",
+      "Added scroll-in fade animations across multiple pages and a back-to-top reusable component",
+      "Integrated CAPTCHA and error message validation into Contact and Request a Quote forms"
+    ],
+    techStack: [
+      "WordPress",
+      "PHP",
+      "Vite",
+      "MapTiler",
+      "Iconify",
+      "JavaScript",
+      "CSS"
+    ],
+    process: `
+      I began by translating the Figma design into a working theme — establishing custom fonts, a typography
+      and color system, and reusable header and footer components for both desktop and mobile. From there I
+      built each page template individually, working through the product catalogue, projects showcase,
+      services, innovation, events, and contact pages.
+
+      For the product catalogue, I built a custom post type with brand and category taxonomies,
+      a URL-state-persisted filtering system, collapsible subcategories, and individual product pages
+      with brochure file uploads and YouTube embeds. The projects section featured a category grid
+      overlay with dynamic filtering and a pinned pagination component shared across views.
+
+      At one point I built a fully interactive Philippines map using MapTiler — complete with hover tooltips
+      and region click panels — which was ultimately removed at the client's request. Rather than viewing it
+      as wasted effort, I took it as a lesson in resourcefulness: the process of integrating an unfamiliar
+      mapping API under real project constraints pushed me to problem-solve in ways I wouldn't have otherwise.
+
+      Throughout the build I iterated on performance, replacing ACF with native WordPress CPTs
+      and running asset bundling through Vite.
+    `,
+    challenges: [
+      "Building a fully functional product filtering and subcategory system that persists state in the URL without a JS framework",
+      "Removing the ACF dependency mid-project and migrating all custom fields to native WordPress CPTs and taxonomies",
+      "Maintaining consistent responsive layouts across ten pages with varied content structures",
+      "Optimizing hero images and lazy-loading below-fold assets to meet performance targets"
+    ],
+    outcome: `
+      The result is a polished, production-ready WordPress theme that gives Energynet Inc. a professional
+      online presence tailored to their brand. The custom filtering system provides a strong product discovery
+      experience, and the CMS-driven architecture empowers the client to manage products, projects, and events
+      independently. This project also reinforced an important lesson in craft — that building something which
+      doesn't make it to production isn't wasted work. The interactive map feature I developed and later saw
+      removed taught me to stay resourceful, adapt quickly, and find value in the process itself.
+    `,
+    github: "https://github.com/allison-dahan/energynet",
+    videoBefore: "/videos/energynet.mp4",
+    videoAfter: "/videos/energynet_new.mp4"
+  },
+  {
     slug: "chez-mari",
     title: "Chez Mari Hair Salon",
     subtitle: "Custom WordPress theme for a Vancouver-based salon",
@@ -37,7 +105,6 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
       { src: "/images/chez-mari-hero.png", alt: "Chez Mari - Desktop homepage mockup" },
       { src: "/images/chez-mari-services.png", alt: "Chez Mari - Service filtering UI" }
     ],
-    liveSite: "https://chezmari.com"
   },
   {
     slug: "task-manager",
@@ -132,49 +199,66 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
   {
     slug: "fitness-tracker",
     title: "Fitness Tracker",
-    subtitle: "A single-page fitness tracking web app built with .NET and deployed on Azure",
+    subtitle: "A comprehensive fitness tracking web application with layered architecture and modern UI",
     heroImage: "/images/fitness-tracker-hero.png", 
     overview: `
-      Fitness Tracker is a single-page health and fitness tracking app built with .NET 8 MVC and AppRun.js.
-      The application allows users to view workouts, log meals, and track progress over time.
-      It uses Google authentication with Identity roles, stores data in MySQL, and is deployed on Azure with CI/CD pipelines via GitHub Actions.
+      Fitness Tracker is a full-featured health and fitness tracking application built with ASP.NET Core 8.0 MVC.
+      The application features a clean layered architecture with separate Business, DataAccess, and Models projects, 
+      enabling users to track workouts, log nutrition with macro tracking, monitor daily goals, and visualize progress 
+      through interactive charts. It uses Entity Framework Core with MySQL, features a modern glassmorphism UI design, 
+      and is deployed on Azure with automated CI/CD pipelines via GitHub Actions.
     `,
     role: [
-      "Designed and implemented the entire front-end and back-end in .NET 8 MVC",
-      "Integrated AppRun.js for client-side navigation without reloading pages",
-      "Set up Google authentication and Identity role management",
-      "Manually created MySQL tables and indexes for workouts, nutrition, and user profiles",
-      "Configured CI/CD deployment using GitHub Actions into Azure App Service"
+      "Architected a layered solution with separate Business Logic, Data Access, and Models projects for clean separation of concerns",
+      "Implemented Entity Framework Core with code-first migrations and database seeding for MySQL using Pomelo provider",
+      "Built interactive data visualizations using Chart.js including bar charts for weekly activity and doughnut charts for macro distribution",
+      "Designed a modern glassmorphism UI with custom CSS variables, backdrop filters, and Bootstrap 5 components",
+      "Integrated ASP.NET Core Identity with Google OAuth for secure authentication and role-based authorization",
+      "Configured Azure App Service deployment with GitHub Actions CI/CD pipeline for automated releases"
     ],
     techStack: [
-      ".NET 8 MVC",
-      "AppRun.js",
+      "ASP.NET Core 8.0 MVC",
+      "Entity Framework Core",
+      "Pomelo.EntityFrameworkCore.MySql",
       "MySQL",
+      "Bootstrap 5",
+      "Chart.js",
+      "ASP.NET Core Identity",
+      "Google OAuth",
       "Azure App Service",
-      "Google Authentication",
       "GitHub Actions"
     ],
     process: `
-      I started by scaffolding the .NET MVC structure and defining models for workouts, nutrition logs, and user profiles.
-      I integrated AppRun.js into Razor pages to provide a seamless SPA experience using hash-based routing (e.g. #workouts, #nutrition).
-      For authentication, I configured Google login via ASP.NET Identity and handled protected routes based on roles.
-      The application was connected to a MySQL database with manually defined schemas to track user metrics.
-      I then configured Azure App Service and GitHub Actions to automate deployment with each commit.
+      I began by designing a layered architecture to ensure maintainability and testability, separating business logic, 
+      data access, and domain models into distinct projects. Using Entity Framework Core, I implemented code-first migrations 
+      to define the database schema for workouts, nutrition logs, user profiles, and daily goals.
+      
+      For the frontend, I developed a cohesive design system featuring glassmorphism aesthetics with frosted glass effects, 
+      backdrop blur, and a vibrant color palette (deep blue, purple, and pink accents). I integrated Chart.js to create 
+      interactive visualizations for the dashboard, including weekly activity bar charts and macronutrient doughnut charts.
+      
+      Authentication was handled through ASP.NET Core Identity with Google OAuth integration, providing secure sign-in 
+      and role-based access control. I configured the Pomelo MySQL provider to ensure compatibility with Azure Database 
+      for MySQL, then set up GitHub Actions workflows to automate testing and deployment to Azure App Service.
     `,
     challenges: [
-      "Troubleshooting `app is not a constructor` errors with AppRun.js setup",
-      "Fixing a `redirect_uri_mismatch` during Google login on Azure",
-      "Resolving Git push rejections due to diverged branches in CI/CD pipeline",
-      "Ensuring SPA navigation inside MVC Razor Pages without breaking the layout"
+      "Configuring Entity Framework Core with MySQL using the Pomelo provider and ensuring proper connection string handling in Azure",
+      "Implementing a consistent glassmorphism design system with backdrop filters while maintaining cross-browser compatibility",
+      "Designing responsive Chart.js visualizations that adapt to different screen sizes and data ranges",
+      "Managing Google OAuth redirect URIs across local development and Azure production environments",
+      "Optimizing database queries and implementing proper async/await patterns for improved performance"
     ],
     outcome: `
-      The final result was a responsive, cloud-hosted fitness tracking app that allows users to seamlessly switch between views like Dashboard, Workouts, Nutrition, and Profile. 
-      CI/CD ensured continuous delivery through GitHub, and Google sign-in provided a secure and user-friendly experience. 
-      This project solidified my understanding of cloud deployment, authentication, and full-stack architecture using Microsoft tools.
+      The result is a professional, production-ready fitness tracking application with clean architecture and modern UX. 
+      The layered design ensures maintainability and makes it easy to extend features or swap data providers. The glassmorphism 
+      UI creates a premium, engaging user experience, while Chart.js visualizations help users understand their fitness progress 
+      at a glance. Automated CI/CD through GitHub Actions enables rapid iteration and reliable deployments. This project 
+      demonstrates full-stack proficiency with .NET Core, modern frontend design, cloud deployment, and software architecture best practices.
     `,
     images: [
-      { src: "/images/fitness-tracker-dashboard.png", alt: "Fitness Tracker - Dashboard view" },
-      { src: "/images/fitness-tracker-nutrition.png", alt: "Fitness Tracker - Nutrition" },
+      { src: "/images/fitness-tracker-dashboard.png", alt: "Fitness Tracker - Dashboard with charts and stats" },
+      { src: "/images/fitness-tracker-workouts.png", alt: "Fitness Tracker - Workout logging interface" },
+      { src: "/images/fitness-tracker-nutrition.png", alt: "Fitness Tracker - Nutrition tracking with macros" },
       { src: "/images/fitness-tracker-auth.png", alt: "Google Authentication login page" }
     ],
     github: "https://github.com/allison-dahan/FitnessTracker"
@@ -235,7 +319,6 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
       { src: "/images/flare-api.png", alt: "Flare - API integration output view" }
     ],
     github: "https://github.com/noonnofus/Flare_IDSP?tab=readme-ov-file", // replace if repo is private or under org
-    liveSite: "https://www.flare-bc.com/" // add demo link if hosted
   },
   {
     slug: "webflow-real-estate",
@@ -295,10 +378,8 @@ On the backend, I prioritized ease of use for the client, enabling them to updat
     { src: "/images/webflow-realestate-projects.png", alt: "Projects Section" }
   ],
 
-  liveSite: "https://real-estate-clinics.webflow.io/", 
+  liveSite: "https://real-estate-clinics.webflow.io/",
 
-  }
-  
-  
-  
+  },
+
 ]
